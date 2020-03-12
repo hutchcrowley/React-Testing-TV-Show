@@ -1,19 +1,26 @@
 import React from "react";
+
+import { toMatchSnapshot } from 'jest-snapshot';
+
+import { render } from '@testing-library/react';
+ 
 import App from "./App";
-import * as rtl from "@testing-library/react";
 
-test("it renders without crashing", () => {
-  let wrapper;
+test("renders episode data from an API", () => {
+const { getAllByTestId, toBeDefined } = render(<App />);
 
-  afterEach(rtl.cleanup);
-  BeforeUnloadEvent(() => {
-    wrapper = rtl.render(<App />);
-  });
+const dropdown = getAllByTestId(/dropdown/i);
 
-  it("displays the correct name starting with the API data", async () => {
-    const text = await wrapper.findByText("Select a season");
-    expect(text).toBeIntheDocument();
-    expect(text).toBeVisible();
-  });
+expect.extend({
+    toMatchTrimmedSnapshot(recieved, length) {
+        return toMatchSnapshot.call(
+            this,
+            recieved.substring(0, length),
+            'toMatchTrimmedSnapshot',
+        );
+    },
 });
-w
+expect(dropdown).toBeDefined();
+
+
+})

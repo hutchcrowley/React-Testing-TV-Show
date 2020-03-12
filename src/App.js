@@ -38,6 +38,7 @@ export default function App() {
       <Dropdown
         options={Object.keys(seasons)}
         onChange={handleSelect}
+        testID='dropdown'
         value={selectedSeason || "Select a season"}
         placeholder="Select an option"
       />
