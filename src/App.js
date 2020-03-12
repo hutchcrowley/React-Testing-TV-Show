@@ -20,7 +20,7 @@ export default function App() {
       setShow(res.data);
       setSeasons(formatSeasons(res.data._embedded.episodes));
     });
-  }, [])
+  }, []);
 
   const handleSelect = e => {
     setSelectedSeason(e.value);
@@ -38,7 +38,7 @@ export default function App() {
       <Dropdown
         options={Object.keys(seasons)}
         onChange={handleSelect}
-        testID='dropdown'
+        data-testid="dropdown"
         value={selectedSeason || "Select a season"}
         placeholder="Select an option"
       />

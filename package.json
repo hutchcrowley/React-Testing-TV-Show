@@ -12,7 +12,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-dropdown": "^1.6.4",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "react-test-renderer": "^16.13.0",
+    "uuid": "^7.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
