@@ -7,5 +7,8 @@ export const fetchShow = () => {
     )
     .then(res => {
       return res;
+    })
+    .catch(error => {
+      console.log(error);
     });
 };
