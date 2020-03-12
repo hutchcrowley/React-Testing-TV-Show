@@ -1,7 +1,8 @@
-import React from 'react';
-import parse from 'html-react-parser';
+import React from "react";
+import parse from "html-react-parser";
 
 export default function Episodes(props) {
+  console.log("Props in the Episodes component: ", props);
   return (
     <div className="episodes">
       {props.episodes.map(e => (
@@ -16,9 +17,14 @@ export default function Episodes(props) {
             <h3>{e.name}</h3>
             {e.summary && parse(e.summary)}
             <div className="flex-spacer" />
+            <div className='episode-link'>
+              <a href={e.url}>
+                view episode
+              </a>
+            </div>
+        </div>``
             <p className="episode-runtime">{e.runtime} minutes</p>
           </div>
-        </div>
       ))}
     </div>
   );

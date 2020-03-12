@@ -76,7 +76,8 @@ body {
 .episode-info {
   height: 100%;
   text-align: left;
-  padding: 8px 12px;
+  padding: 12px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,10 +98,15 @@ body {
 }
 
 .flex-spacer {
-  flex-grow: 1;
+  flex-grow: 3;
 }
 
 p.episode-runtime {
   margin-top: 8px;
   font-size: 0.8rem;
+}
+
+.episode-link a {
+  text-decoration: none;
+  color: #000;
 }
