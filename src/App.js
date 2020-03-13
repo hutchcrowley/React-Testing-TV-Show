@@ -26,11 +26,9 @@ export default function App() {
     setSelectedSeason(e.value);
   };
 
-  if (!show) {
-    return <h2>Fetching data...</h2>;
-  }
-
-  return (
+  return !show ? (
+    <h2>Fetching data...</h2>
+  ) : (
     <div className="App">
       <img className="poster-img" src={show.image.original} alt={show.name} />
       <h1>{show.name}</h1>
@@ -42,7 +40,7 @@ export default function App() {
         value={selectedSeason || "Select a season"}
         placeholder="Select an option"
       />
-      <Episodes episodes={episodes} />
+      <Episodes episodes={episodes} data-testid="episodes" />
     </div>
   );
 }

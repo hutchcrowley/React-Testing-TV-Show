@@ -1,12 +1,28 @@
 import React from "react";
 
-import  renderer from "react-test-renderer";
+import { fireEvent, render } from '@testing-library/react';
+
 
 import App from "./App";
 
-it("renders correctly", () => {
-  const app = renderer.create(<App />).toJSON();
 
-  expect(app).toMatchSnapshot();
-  console.log(app)
-});
+ test("it renders, fetches data from the API and renders it", async () => {
+
+ const { getByText, queryAllByTestId, getByTestId } = render(<App />);
+
+ expect.assertions(2);
+
+  const string = getByText(/fetching data/i);
+  console.log(string);
+
+  const dropdown = await getByTestId('dropdown')
+  
+  fireEvent.click(dropdown);
+  const season1 = getByText(/season 1/i);
+  fireEvent.click(season1);
+  
+  expect(string).toBeDefined()
+  await expect(queryAllByTestid('episodes').toHaveLength(8));
+ 
+})
+

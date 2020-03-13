@@ -1,4 +1,5 @@
 import { makeUser } from "./helpers";
+import * as jest from '@testing-library/jest-dom'
 
 jest.mock('uuid', () => () => 'abcde')
 

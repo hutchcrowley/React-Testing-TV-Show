@@ -8,12 +8,11 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "html-react-parser": "^0.10.1",
-    "jest-snapshot": "^25.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-dropdown": "^1.6.4",
-    "react-scripts": "3.4.0",
     "react-test-renderer": "^16.13.0",
+    "react-scripts": "3.4.0",
     "uuid": "^7.0.2"
   },
   "scripts": {
@@ -36,5 +35,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "- use mocks in unit tests\r - test asynchronous API calls that are made in a component\r - test React components as the props change",
+  "main": "prettierrc.config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hutchcrowley/React-Testing-TV-Show.git"
+  },
+  "author": "hutch crowley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hutchcrowley/React-Testing-TV-Show/issues"
+  },
+  "homepage": "https://github.com/hutchcrowley/React-Testing-TV-Show#readme"
 }
