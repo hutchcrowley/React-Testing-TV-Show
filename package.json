@@ -43,10 +43,9 @@
     "type": "git",
     "url": "git+https://github.com/hutchcrowley/React-Testing-TV-Show.git"
   },
-  "author": "hutch crowley",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hutchcrowley/React-Testing-TV-Show/issues"
   },
-  "homepage": "https://github.com/hutchcrowley/React-Testing-TV-Show#readme"
+  "author": "hutch crowley"
 }

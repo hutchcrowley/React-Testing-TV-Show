@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 
 import { formatSeasons } from "./utils/formatSeasons";
 
-import { fetchShow } from "../src/api/fetchshow";
+import { fetchShow } from "./api/fetchShow";
 
 import Episodes from "./components/Episodes";
 import "./styles.css";
