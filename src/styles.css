@@ -76,20 +76,27 @@ body {
 .episode-info {
   height: 100%;
   text-align: left;
-  padding: 8px 12px;
+  padding: 12px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.episode-info > h3,
+.episode-info > h3 {
+  margin: 0;
+}
+
 .episode-info > p {
   margin: 0;
+  font-size: 11pt;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid gray;
 }
 
 .episode-info > h3 {
   text-align: center;
-  margin: 12px 0;
+  margin: 6px 0;
 }
 
 .episode-number {
@@ -97,10 +104,17 @@ body {
 }
 
 .flex-spacer {
-  flex-grow: 1;
+  flex-grow: 3;
 }
 
 p.episode-runtime {
   margin-top: 8px;
   font-size: 0.8rem;
+}
+
+.episode-link a {
+  text-decoration: none;                                      
+  color: #000;
+  font-size: 15pt;
+  margin-top: .4rem;
 }
